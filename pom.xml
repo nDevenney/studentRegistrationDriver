@@ -7,9 +7,6 @@
     <name>Student Registration System Test Driver</name>
     <repositories>
         <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
             <id>bintray-eulend-ndMaven</id>
             <name>bintray</name>
             <url>http://dl.bintray.com/eulend/ndMaven</url>
