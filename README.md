@@ -2,10 +2,13 @@
 Part 2 of Software Engineering III Assignment 1
 
 ## Building the JAR
-Run `mvn clean package` from a terminal
+Open a terminal and navigate to the project folder and run:
+```bash
+mvn clean package
+```
 
 ## Running the JAR
-While in the project folder in a terminal run these commands
+While still in the project folder run these commands
 ```bash
 cd target
 
