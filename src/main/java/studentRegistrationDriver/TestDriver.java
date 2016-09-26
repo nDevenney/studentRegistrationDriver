@@ -34,6 +34,10 @@ public class TestDriver {
 
         Course csit = new Course("Computer Science and Information Technology", new ArrayList<Module>(), startDate,
                 endDate);
+        
+        for (Student s : students) {
+            s.setCourse(csit);
+        }
 
         software.addStudent(adam);
         software.addStudent(billy);
@@ -50,10 +54,22 @@ public class TestDriver {
         csit.addModule(graphics);
         csit.addModule(maths);
 
-        System.out.println("Students registered for " + csit.getName());
-        System.out.println("Course dates: " + startDate.getDayOfMonth() + "/" + startDate.getMonthOfYear() + "/"
+        System.out.println("***Students registered***");
+
+        for (Student s : students) {
+            System.out.println("\n" + s);
+            System.out.println("\tCourse: " + s.getCourse().getName());
+            System.out.println("\tRegistered for: ");
+            for (Module m : csit.getModules()) {
+                if (m.getStudents().contains(s)) {
+                    System.out.println("\t\t" + m);
+                }
+            }
+        }
+        
+        System.out.println("\nCourse dates for " + csit.getName() + ": " +  + startDate.getDayOfMonth() + "/" + startDate.getMonthOfYear() + "/"
                 + startDate.getYear() + " - " + endDate.getDayOfMonth() + "/" + endDate.getMonthOfYear() + "/"
-                + endDate.getYear() + "\n");
+                + endDate.getYear());
     }
 
 }
